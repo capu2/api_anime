@@ -5,7 +5,7 @@
         <div class="portlet light bordered">
             <div class="portlet-title">
                 <div class="caption font-dark">                    
-                    <h3 class="caption-subject bold uppercase"> <i class="fa fa-th-large"></i> @if($criando) Cadastrar Anime @else Editar Anime @endif </h3>
+                    <h3 class="caption-subject bold uppercase text-center"> <i class="fa fa-th-large"></i> @if($criando) Cadastrar Anime @else Editar Anime @endif </h3>
                 </div>
             </div>
             <div class="portlet-body form">
