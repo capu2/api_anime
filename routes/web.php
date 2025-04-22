@@ -18,4 +18,10 @@ Route::POST('anime-update/{id}', [AnimesController::class, 'updateAnime'])->name
 
 
 //API
+
 Route::get('get-animes', [AnimeApiController::class, 'index']);
+Route::middleware('api')->group(function () {
+    Route::post('store-animes', [AnimeApiController::class, 'storeAnime']);
+});
+Route::put('update-animes', [AnimeApiController::class, 'update-anime']);
+Route::post('delete-animes', [AnimeApiController::class, 'delete-anime']);

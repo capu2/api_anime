@@ -16,16 +16,27 @@ class AnimeApiController extends Controller
     }
 
     // Criar um novo anime
-    public function store(Request $request)
+    public function storeAnime(Request $request)
     {
-        $anime = Animes::create($request->validate([
+        $request->validate([
             'title' => 'required|string|max:255',
             'release_year' => 'required|integer',
             'studio' => 'nullable|string|max:255',
             'creator' => 'nullable|string|max:255',
-        ]));
+        ]);
 
-        return response()->json($anime, 201);
+        $animes = Animes::create([
+            'title' => $request->nome,
+            'short_description' => $request->descricao,
+            'release_year' => $request->lancamento,
+            'studio' => $request->estudio,
+            'creator' => $request->criador
+        ]);
+
+        return response()->json([
+            'message' => 'Item cadastrado com sucesso!',
+            'data' => $animes
+        ], 201);
     }
 
     // Exibir um anime específico
