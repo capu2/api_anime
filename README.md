@@ -83,12 +83,6 @@ Abra uma issue ou envie um pull request com melhorias, correções ou novas idei
 
 ---
 
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT. Veja mais em [LICENSE](LICENSE).
-
----
-
 ### 🌐 Projeto
 
 [🔗 Repositório no GitHub](https://github.com/capu2/api_anime)
